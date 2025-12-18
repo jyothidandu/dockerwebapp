@@ -3,12 +3,12 @@ version: "3"
 services:
  devopsdb:
    container_name: devopsdb
-   build: shaikmustafa/valluri:dbimage
+   image: shaikmustafa/valluri:dbimage
    ports:
      - "3306:3306"
 
  application:
-   build: shaikmustafa/valluri:appimage
+   image: shaikmustafa/valluri:appimage
    container_name: containerapp
    ports:
      - "1234:8080"
