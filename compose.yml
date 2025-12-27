@@ -3,11 +3,15 @@ version: "3"
 services:
  devopsdb:
    image: devarajyothi/myapp:dbimage
+   deploy:
+   replicas: 4
    ports:
      - "3306:3306"
 
  application:
-   image: devarajyothi/myapp:appimage
+   image: devarajyothi/myapp:appimage 
+   deploy:
+   replicas: 4
    ports:
      - "1234:8080"
    depends_on:
